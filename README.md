@@ -3,7 +3,7 @@ A classic Pac-Man game built from scratch in Python using PyGame. Features inclu
 
 # Pac-Man in Python with PyGame
 
-A classic Pac-Man game built from scratch using Python and PyGame! 🟡👻
+A classic Pac-Man game built from scratch using Python and PyGame!
 
 ## Overview
 This project is a recreation of the iconic Pac-Man game. It includes player movement with smooth animation, AI-controlled ghosts with different behaviors (Blinky, Pinky, Inky, Clyde), collectible dots and power-ups, score tracking, lives, and a classic maze layout inspired by the original game. The game demonstrates object-oriented programming, collision detection, and basic AI logic in Python.
