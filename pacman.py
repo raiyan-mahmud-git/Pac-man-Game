@@ -15,6 +15,7 @@ level = copy.deepcopy(boards)
 color = 'blue'
 PI = math.pi
 player_images = []
+
 for i in range(1, 5):
     player_images.append(pygame.transform.scale(pygame.image.load(f'assets/player_images/{i}.png'), (45, 45)))
 blinky_img = pygame.transform.scale(pygame.image.load(f'assets/ghost_images/red.png'), (45, 45))
@@ -743,7 +744,9 @@ def check_position(centerx, centery):
     num1 = (HEIGHT - 50) // 32
     num2 = (WIDTH // 30)
     num3 = 15
+    
     # check collisions based on center x and center y of player +/- fudge number
+    
     if centerx // 30 < 29:
         if direction == 0:
             if level[centery // num1][(centerx - num3) // num2] < 3:
@@ -927,6 +930,7 @@ while run:
         ghost_speeds[3] = 4
 
     game_won = True
+    
     for i in range(len(level)):
         if 1 in level[i] or 2 in level[i]:
             game_won = False
@@ -945,6 +949,7 @@ while run:
     targets = get_targets(blinky_x, blinky_y, inky_x, inky_y, pinky_x, pinky_y, clyde_x, clyde_y)
 
     turns_allowed = check_position(center_x, center_y)
+    
     if moving:
         player_x, player_y = move_player(player_x, player_y)
         if not blinky_dead and not blinky.in_box:
@@ -1217,6 +1222,3 @@ while run:
 
     pygame.display.flip()
 pygame.quit()
-
-
-# sound effects, restart and winning messages
